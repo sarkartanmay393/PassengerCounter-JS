@@ -15,6 +15,10 @@ function incr() {
 }
 
 function save() {
+    if (count < 1) {
+        console.log("Count is zero, so not saving it.")
+        return
+    }
     prevCountVariable.innerText = count
     count = 0
     countVariable.innerText = count
